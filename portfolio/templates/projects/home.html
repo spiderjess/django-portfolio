@@ -1,0 +1,41 @@
+{% extends 'projects\base.html' %} {% block content %} {% load static %}
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <img
+      id="self"
+      style="
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30% !important;
+      "
+      src="{% static 'portfolio\jessica.jpg' %}"
+    />
+  </div>
+</div>
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext" class="font-weight-bold">
+      Jessica L. Dickerson is a Software Developer at Banyan Labs
+    </h1>
+  </div>
+</div>
+
+<h2 class="mt-5">Portfolio</h2>
+<hr />
+
+<div class="row projectRow">
+  {% for project in projects %}
+
+  <div class="col-lg-4 col-md-6">
+    <h2>{{ project.title }}</h2>
+
+    <p>{{ project.description }}</p>
+
+    <img class="img-fluid" id="project" src="{{ project.image.url }}" />
+  </div>
+
+  {% endfor %} {% endblock %}
+</div>

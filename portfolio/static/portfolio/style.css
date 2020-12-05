@@ -1,0 +1,47 @@
+#spider {
+  height: 70;
+}
+#title {
+  margin: 10;
+}
+#self {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px !important;
+  width: 30% !important;
+}
+#project {
+  width: 400px !important;
+}
+.projectRow {
+  margin: 10px;
+}
+
+/* <link rel="stylesheet" href="{% static 'portfolio/style.css' %}" /> */
+ul {
+  list-style: none;
+  position: absolute !important;
+  right: 0px !important;
+  top: 5 !important;
+}
+ul li {
+  display: inline-block;
+  padding: 0 7px;
+  position: relative;
+}
+ul li:not(:last-child)::after {
+  content: "";
+  border: 1px solid red !important;
+  border-width: 1px 1px 0 0 !important;
+  position: absolute;
+  right: -3px;
+  top: 0;
+  height: 100%;
+}
+a {
+  color: gray;
+}
+.name {
+  font-size: 20px !important;
+}
